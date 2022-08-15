@@ -1,1 +1,1 @@
-# Android_chechout
+# Android_checkout
