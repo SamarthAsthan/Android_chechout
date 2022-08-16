@@ -1,4 +1,4 @@
-package com.care.nppd_samarth;
+package com.samarth.android_checkout;
 
 import org.junit.Test;
 

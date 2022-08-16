@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckoutMain">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/upperTab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gray">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            app:tint="@color/light_gray">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_centerInParent="true"
+            android:textSize="20dp">
+        </TextView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        app:tabTextColor="@color/light_gray"
+        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="@color/gray"
+        android:layout_below="@id/upperTab">
+        
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping"
+            android:id="@+id/shippingTab"
+            android:icon="@drawable/ic_arrow_left">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:id="@+id/paymentTab"
+            android:icon="@drawable/ic_arrow_left">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:id="@+id/orderTab"
+            android:icon="@drawable/ic_arrow_left">
+        </com.google.android.material.tabs.TabItem>
+        
+        
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
