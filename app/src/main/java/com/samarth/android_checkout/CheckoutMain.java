@@ -3,6 +3,7 @@ package com.samarth.android_checkout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabItem;
@@ -37,11 +38,14 @@ public class CheckoutMain extends AppCompatActivity {
                 if(tab.getPosition()==0 || tab.getPosition()==1 || tab.getPosition()==2){
                     pageAdapter.notifyDataSetChanged();
                 }
+                Drawable selectIcon = getApplicationContext().getResources().getDrawable(R.drawable.ic_check_box);
+                tab.setIcon(selectIcon);
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                Drawable unselectIcon = getApplicationContext().getResources().getDrawable(R.drawable.ic_uncheck_box);
+                tab.setIcon(unselectIcon);
             }
 
             @Override

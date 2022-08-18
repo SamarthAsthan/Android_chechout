@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +7,126 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Shipping"
-        android:gravity="center" />
+        android:id="@+id/contact_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACT DETAILS"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp">
+    </TextView>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/first_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/contact_text">
+    </EditText>
+
+    <EditText
+        android:id="@+id/second_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Second Name"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/first_name_edittext">
+    </EditText>
+
+    <EditText
+        android:id="@+id/email_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/second_name_edittext">
+    </EditText>
+
+    <EditText
+        android:id="@+id/phone_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/email_edittext">
+    </EditText>
+
+    <ImageView
+        android:id="@+id/gray_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_below="@id/phone_number_edittext">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/Shipping_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHIPPING ADDRESS"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/gray_line">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/country_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="postalCode"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/Shipping_text"
+        android:entries="@array/countries_array">
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/states_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="postalCode"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/country_spinner"
+        android:entries="@array/india_states">
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/city_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="postalCode"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/states_spinner"
+        android:entries="@array/india_states">
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/zipcode_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="postalCode"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/city_spinner"
+        android:entries="@array/india_states">
+    </Spinner>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_left"
+        android:rotation="180"
+        android:layout_margin="16dp"
+        tools:ignore="ContentDescription,HardcodedText"
+        android:contentDescription="TODO"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
